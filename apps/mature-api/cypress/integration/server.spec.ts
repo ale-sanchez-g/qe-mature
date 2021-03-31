@@ -1,6 +1,6 @@
 describe('Express App', () => {
     beforeEach(() => {
-        cy.request('/api').as('api')
+        cy.request('/').as('api')
       })
   it('should display API', () => {
     cy.get('@api').should((response) => {
