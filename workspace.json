@@ -60,6 +60,17 @@
             "jestConfig": "apps/mature-api/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "outputs": [
+            "coverage/apps/mature-api"
+          ],
+          "options": {
+            "cypressConfig": "apps/mature-api/cypress.json",
+            "tsConfig": "apps/mature-api/tsconfig.e2e.json",
+            "devServerTarget": "mature-api:serve"
+          }
         }
       }
     }
