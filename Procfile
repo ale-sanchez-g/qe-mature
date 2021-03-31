@@ -1,1 +1,1 @@
-web PORT=$PORT npx nx serve mature-api
+web PORT=$PORT npm run start:api
