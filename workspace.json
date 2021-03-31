@@ -1,10 +1,67 @@
 {
-  
-  
   "version": 2,
-  
-  "projects": {},
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/express"
+  },
+  "defaultProject": "mature-api",
+  "projects": {
+    "mature-api": {
+      "root": "apps/mature-api",
+      "sourceRoot": "apps/mature-api/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/apps/mature-api",
+            "main": "apps/mature-api/src/main.ts",
+            "tsConfig": "apps/mature-api/tsconfig.app.json",
+            "assets": [
+              "apps/mature-api/src/assets"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/mature-api/src/environments/environment.ts",
+                  "with": "apps/mature-api/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "mature-api:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/mature-api/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/mature-api"
+          ],
+          "options": {
+            "jestConfig": "apps/mature-api/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
   }
 }
