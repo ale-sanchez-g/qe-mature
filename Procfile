@@ -1,1 +1,1 @@
-web npx nx serve mature-api
+web PORT=$PORT npx nx serve mature-api
