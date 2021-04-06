@@ -1,4 +1,5 @@
 version: 2.1
+CI: false
 orbs:
   cypress: cypress-io/cypress@1
 workflows:
