@@ -6,9 +6,8 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          yarn: true
-          install-command: 'yarn install'
-          build: 'yarn nx build mature-api'
+          install-command: 'npm install'
+          build: 'npx nx build mature-api'
           start: 'PORT=3001 node dist/apps/mature-api/main'
           wait-on: 'http://localhost:3001'
           post-steps:
