@@ -1,7 +1,14 @@
 version: 2.1
 orbs:
-  node: circleci/node@3.0.0
+  cypress: cypress-io/cypress@1
 workflows:
-  node-tests:
+  build:
     jobs:
-      - node/test
+      - cypress/run:
+          yarn: true
+          install-command: 'yarn install'
+          build: 'yarn nx build mature-api'
+          start: 'PORT=3001 node dist/apps/mature-api/main'
+          wait-on: 'http://localhost:3001'
+          post-steps:
+            - run: 'npx cypress run'
