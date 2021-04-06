@@ -11,4 +11,4 @@ jobs:
       image: ubuntu-2004:202010-01 # recommended linux image
     resource_class: large
     steps:
-      - run: npm install
+      - run: PORT=3001 node dist/apps/mature-api/main && npx cypress run
