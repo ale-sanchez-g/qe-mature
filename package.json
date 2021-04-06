@@ -5,8 +5,7 @@
   "scripts": {
     "nx": "nx",
     "start:api": "node dist/apps/mature-api/main",
-    "build": "nx build",
-    "test": "PORT=3001 node dist/apps/mature-api/main && npx cypress run",
+    "test": "npx nx build mature-api && PORT=3001 node dist/apps/mature-api/main && npx cypress run",
     "lint": "nx workspace-lint && nx lint",
     "e2e": "nx e2e",
     "affected:apps": "nx affected:apps",
