@@ -7,7 +7,7 @@ workflows:
     jobs:
       - cypress/run:
           install-command: 'npm install'
-          test: 'npx nx test'
+          command: 'npx nx test'
           build: 'npx nx build mature-api'
           start: 'PORT=3001 node dist/apps/mature-api/main'
           wait-on: 'http://localhost:3001/api'
