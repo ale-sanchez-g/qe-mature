@@ -5,3 +5,10 @@ workflows:
   node-tests:
     jobs:
       - node/test
+jobs:
+  build:
+    machine:
+      image: ubuntu-2004:202010-01 # recommended linux image
+    resource_class: large
+    steps:
+      - run: npm install
