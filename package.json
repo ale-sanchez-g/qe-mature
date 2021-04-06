@@ -6,7 +6,7 @@
     "nx": "nx",
     "start:api": "node dist/apps/mature-api/main",
     "build": "nx build",
-    "test": "nx test",
+    "test": "PORT=3001 node dist/apps/mature-api/main && npx cypress run",
     "lint": "nx workspace-lint && nx lint",
     "e2e": "nx e2e",
     "affected:apps": "nx affected:apps",
