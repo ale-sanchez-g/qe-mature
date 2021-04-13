@@ -6,10 +6,30 @@ This project was generated using [Nx](https://nx.dev).
 
 This is a simple tool to understand your teams maturity with in Quality Engineering practices.
 
-
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
 🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+
+## Design
+
+In order to best understand how to host this application, we need to have a basic diagram of the application involved.
+
+Users can then select to host this in their own cloud or locally.
+
+The below is an example of the applications that might be needed base on the ideation and R&D Phase.
+
+**Hazura**
+
+Postgress DB
+GraphQL layer
+
+**Single Page front ends**
+
+React or Pug for registration
+React or Pug for assemsmet
+React or Pug for Graphs (might be post MVP)
+
+refer to the [design document](DESIGN.md)
 
 ## Adding capabilities to your workspace
 
