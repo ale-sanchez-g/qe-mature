@@ -1,1 +1,1 @@
-web PORT=$PORT npm run start:org
+web npm run start:org --port=$PORT
