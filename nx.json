@@ -1,13 +1,18 @@
 {
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "master"
+  },
   "npmScope": "qe-mature",
   "tasksRunnerOptions": {
     "default": {
@@ -20,5 +25,16 @@
       }
     }
   },
-  "projects": { "mature-api": { "tags": [] } }
+  "projects": {
+    "mature-api": {
+      "tags": []
+    },
+    "mature-org": {
+      "tags": []
+    },
+    "mature-org-e2e": {
+      "tags": [],
+      "implicitDependencies": ["mature-org"]
+    }
+  }
 }
