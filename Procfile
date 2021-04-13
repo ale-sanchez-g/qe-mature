@@ -1,1 +1,1 @@
-web npm run start:org --port=$PORT
+web npx nx serve mature-org --port=$PORT
