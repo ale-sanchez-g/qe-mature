@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "nx": "nx",
+    "build": "nx build mature-api",
     "start:api": "node dist/apps/mature-api/main",
     "test": "npx nx build mature-api && PORT=3001 node dist/apps/mature-api/main > output.log && npx cypress run",
     "lint": "nx workspace-lint && nx lint",
